@@ -209,6 +209,7 @@ nav.active ~ .cart-items-container {
 
 nav.search-show ~ .search-form  {
   transform: scale(1);
+  padding: .4rem;
 }
 
 
@@ -304,7 +305,7 @@ nav.show {
 }
 
 .content h3 {
-  font-size: 2.7rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 
@@ -317,6 +318,7 @@ nav.show {
 
 .btn-about {
   font-size: 1.7rem;
+  padding: 1rem;
 }
 
 .menu .box-container {
