@@ -1,7 +1,27 @@
 :root {
-  --main-color: #d3ad7f ;
+  --black :#837257 ;
+  --main-color: #221d07 ;
+  /* --bg : #aba48f; */
+  --bg : #AFBAC1;
+  /* --header : #5f3e3a; */
+  /* --header : #221d07; */
+  --header : #85684D;
+  --white : #ffffffbb;
+
+  --btn : #9B6D34;
+  /* --btn : #2A1D14; */
+  /* Alternate color pallete  */
+/* ------------------------ */
+/* --main-color: #d3ad7f ;
   --black :#13131a ;
-  --bg : #010103;
+  --bg : #010103; */
+
+  /* Initial color pallete  */
+  /* ------------------------ */
+  /* --main-color: #d3ad7f ;
+  --black :#13131a ;
+  --bg : #010103; */
+
   --border: 2px solid rgba(255, 255, 255, .3);
 }
 
@@ -28,11 +48,11 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background-color: tomato;
+  background-color: #5f3e3a;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #2ecc71;
+  background-color: #85684D;
   border-radius: 5rem;
 }
 
@@ -45,19 +65,19 @@ section {
   padding: 0 5rem;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.7rem 7%;
-  border-bottom: var(--border);
+  padding: 1.7rem 7rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999900;
-  background-color: var(--bg);
-  opacity: 0.8;
+  background-color: var(--header);
+  opacity: 0.9;
+  height: 10vh;
 }
 
 header .logo{
@@ -70,6 +90,9 @@ header .logo{
 
 .header nav {
   display: flex;
+  background-color: var(--header);
+  height: 10vh;
+  align-items: center;
 }
 
 .header nav a{
@@ -91,7 +114,6 @@ header .logo{
 }
 
 .header nav a:hover {
-  color: var(--main-color);
   border-bottom: var(--border);
   padding-bottom: 0.5rem;
 }
@@ -218,6 +240,8 @@ nav.show {
   z-index: 9000000;
 }
 
+ /* =============  THIS IS THE HOME SECTION PART============================ */
+
 .home {
   display: flex;
   align-items: center;
@@ -228,6 +252,7 @@ nav.show {
   width: 100%;
   background-repeat: no-repeat ;
   position: relative;
+  margin-top: 10vh;
 }
 
 .home::after {
@@ -238,8 +263,8 @@ nav.show {
   left:0;
   width: 100%;
   height: 100%;
-  background-color: black;
-  opacity: 0.6;
+  background-color: #2A1D14;
+  opacity: 0.1;
   z-index: 1;
 
 }
@@ -252,22 +277,35 @@ nav.show {
 }
 
 .home .content h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 2rem;
 }
 
 .home .content p {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-weight: lighter;
-  color: #fff;
+  color: var(--white);
   line-height: 1.8;
 }
 
 .btn-home {
   padding: 1rem 2rem;
   font-size: 1.7rem;
+  background-color: var(--btn);
+}
+
+/* ================  END OF THE HOME SECTION ============= */
+
+
+
+
+/* ============= BEGINNING OF THE ABOUT SECTION  ======================= */
+
+.about {
+  border-bottom: 2px solid whitesmoke;
+  padding-bottom: 5rem;
 }
 
 .about .heading {
@@ -275,20 +313,23 @@ nav.show {
   color: #fff;
   text-transform: uppercase;
   font-size: 3rem;
-  margin: 3rem 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
 }
 
 .heading span {
   color: var(--main-color);
 }
 
-.about .row {
+.about .row{
   display: flex;
-  align-items:center;
-  background-color : var(--bg);
+  /* align-items:center; */
+  /* background-color : var(--bg); */
   color: white;
   gap: 1rem;
   flex-wrap: wrap;
+  padding-top:3rem;
 }
 
 .row .image {
@@ -301,17 +342,17 @@ nav.show {
 
 .row .content {
   flex: 1 1 45rem;
-  padding: 2rem;
+  padding: 0  2rem 2rem 2rem;
 }
 
 .content h3 {
-  font-size: 1.6rem;
+  font-size: 2.3rem;
   margin-bottom: 2rem;
 }
 
 .content p {
-  font-size: 1.6rem;
-  color: #ccc;
+  font-size: 1.8rem;
+  color: white;
   padding: 1rem 0;
   line-height: 1.8;
 }
