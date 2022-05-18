@@ -1,28 +1,7 @@
 :root {
-  --black :#837257 ;
   --main-color: #221d07 ;
-  /* --bg : #aba48f; */
-  --bg : #AFBAC1;
-  /* --header : #5f3e3a; */
-  /* --header : #221d07; */
-  --header : #85684D;
   --white : #ffffffbb;
-
-  --btn : #9B6D34;
-  /* --btn : #2A1D14; */
-  /* Alternate color pallete  */
-/* ------------------------ */
-/* --main-color: #d3ad7f ;
-  --black :#13131a ;
-  --bg : #010103; */
-
-  /* Initial color pallete  */
-  /* ------------------------ */
-  /* --main-color: #d3ad7f ;
-  --black :#13131a ;
-  --bg : #010103; */
-
-  --border: 2px solid rgba(255, 255, 255, .3);
+  --contact : #9B6D34;
 }
 
 * {
@@ -34,6 +13,7 @@
   outline: none;
   border: none;
   transition : all 200ms ease; 
+
 }
 
 html {
@@ -57,13 +37,33 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: var(--bg) ;
+  background-color: white ;
 }
 
 section {
   margin: 5rem 0;
   padding: 0 5rem;
 }
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  color:#fff;
+  background-color: black;
+  padding: .7rem .3rem;
+  cursor : pointer;
+  border-radius: 3px;
+  border: 1px solid #dedede;
+  text-align:center;
+  transition: all 250ms ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #555;
+}
+
 
 .header {
   display: flex;
@@ -75,17 +75,17 @@ section {
   left: 0;
   right: 0;
   z-index: 9999900;
-  background-color: var(--header);
   opacity: 0.9;
   height: 10vh;
+  background-color: black;
 }
 
 header .logo{
   font-size: 2.2rem;
-  color: white;
-  font-family: cursive;
-  font-weight: lighter;
+  font-family: Verdana;
+  /* font-weight: bold; */
   font-style: italic;
+  color: white;
 }
 
 .header nav {
@@ -100,6 +100,8 @@ header .logo{
   font-size: 1.6rem;
   color: white;
   border-bottom: 2px solid transparent;
+  padding-bottom: 0.5rem;
+  transition: all 300ms ease;
 }
 
 #menu-btn, #cart-btn, #search-btn {
@@ -115,7 +117,7 @@ header .logo{
 
 .header nav a:hover {
   border-bottom: var(--border);
-  padding-bottom: 0.5rem;
+
 }
 
 #menu-btn {
@@ -126,7 +128,8 @@ header .logo{
   position: absolute;
   top: 115%;
   right: 7%;
-  background-color: white;
+  background-color: black;
+  color: white;
   transform: scale(0);
   transform-origin : top;
 }
@@ -140,14 +143,14 @@ header .logo{
   height: 100%;
   width: 100%;
   font-size: 1.6rem;
-  color: var(--black);
+  color: black;
   padding: 0.7rem;
 }
 
 #search-label {
   cursor: pointer;
   font-size: 2.2rem;
-  color: var(--black);
+  color: black;
   margin-right: 1.1rem;
 }
 
@@ -202,24 +205,12 @@ header .logo{
   margin-bottom: var(--black);
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  color:#fff;
-  background-color: var(--main-color);
-  padding: .7rem .3rem;
-  cursor : pointer;
-  border-radius: 5px;
-  border: 1px solid #dedede;
-  text-align:center;
-}
-
 .cart-item .btn {
   font-size: 1.7rem;
   width: 100%;
 }
 
-.btn:hover {
+.header .btn:hover {
   letter-spacing: .22rem;
 }
 
@@ -263,8 +254,8 @@ nav.show {
   left:0;
   width: 100%;
   height: 100%;
-  background-color: #2A1D14;
-  opacity: 0.1;
+  background-color: black;
+  opacity: 0.5;
   z-index: 1;
 
 }
@@ -279,22 +270,22 @@ nav.show {
 .home .content h3 {
   font-size: 3rem;
   text-transform: uppercase;
-  color: var(--white);
+  color: white;
   margin-bottom: 2rem;
 }
 
 .home .content p {
   font-size: 2.1rem;
   font-weight: lighter;
-  color: var(--white);
+  color: white;
   line-height: 1.8;
 }
 
 .btn-home {
   padding: 1rem 2rem;
   font-size: 1.7rem;
-  background-color: var(--btn);
 }
+
 
 /* ================  END OF THE HOME SECTION ============= */
 
@@ -306,11 +297,12 @@ nav.show {
 .about {
   border-bottom: 2px solid whitesmoke;
   padding-bottom: 5rem;
+  color: black;
 }
 
 .about .heading {
   text-align:center;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-size: 3rem;
   margin-top: 3rem;
@@ -319,14 +311,14 @@ nav.show {
 }
 
 .heading span {
-  color: var(--main-color);
+  color: var(--header);
 }
 
 .about .row{
   display: flex;
   /* align-items:center; */
   /* background-color : var(--bg); */
-  color: white;
+  color: black;
   gap: 1rem;
   flex-wrap: wrap;
   padding-top:3rem;
@@ -352,7 +344,6 @@ nav.show {
 
 .content p {
   font-size: 1.8rem;
-  color: white;
   padding: 1rem 0;
   line-height: 1.8;
 }
@@ -362,6 +353,12 @@ nav.show {
   padding: 1rem;
 }
 
+
+/*========== ENDING OF THE ABOUT SECTION  ==============  */
+
+
+/* ===========  BEGINNING OF THE MENU SECTION =============== */
+
 .menu .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit , minmax(30rem , 1fr));
@@ -370,13 +367,14 @@ nav.show {
 
 .menu .heading  {
   font-size: 3rem;
-  color: white;
+  color: black;
   text-align:center;
+  font-weight: bold;
   margin: 2rem 0 4rem 0;
 }
 
 .menu .box {
-  border: var(--border);
+  border: 2px solid #ddd;
   color: whitesmoke;
   padding: 5rem;
   text-align: center;
@@ -390,13 +388,13 @@ nav.show {
 }
 
 .box h3 {
-  color: #fff;
+  color:black;
   font-size: 2rem;
   padding: 2rem 0;
 }
 
 .box .price {
-  color: #fff;
+  color: black;
   font-size: 1.8rem;
   font-weight: lighter;
   margin-bottom: 2rem;
@@ -405,7 +403,7 @@ nav.show {
 .box .price span {
   text-decoration: line-through;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .box .btn-menu {
@@ -416,12 +414,29 @@ nav.show {
 }
 
 .menu .box:hover {
-  background-color: #fff;
+  background-color: #333;
 }
 
 .menu .box:hover * {
-  color: var(--black);
+  color: white;
 }
+
+.menu .box:hover .btn {
+  color: black;
+  background-color: white;
+}
+
+.menu .btn-menu {
+  padding: 1rem .8rem;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  font-weight: normal;
+}
+
+/* ======  THIS IS THE END OF THE MENU SECTION ================= */
+
+
+/* =========  THIS IS THE START OF THE PRODUCT SECTION ========== */
 
 .box-container {
   display: grid;
@@ -430,10 +445,11 @@ nav.show {
 }
 
 .products .box-container .box {
-  border: var(--border);
+  border: 1px#555;
   padding: 2rem;
   text-align: center;
   cursor: pointer;
+  background-color: #111;
 }
 
 .products .box-container .icons{
@@ -462,7 +478,7 @@ nav.show {
 
 .products .heading  {
   font-size: 3rem;
-  color: white;
+  color: black;
   text-align:center;
   margin: 4rem 0;
 }
@@ -487,25 +503,39 @@ nav.show {
 .box-container  .stars {
   padding: 1.5rem;
   padding-top: .4rem;
-
 }
 
 .box-container  .stars *{
-  color: var(--main-color);
+  color: tomato;
   font-size:  1.6rem;
   cursor: pointer;
 }
+
+.box-container  .price {
+  color: white;
+}
+/* ==========  THIS IS THE END OF THE PRICE SECTION ============ */
+
+
+/* =========== THIS IS THE START OF THE REVIEW SECTION =============== */
 
 .review .box-container  .box{
   border: var(--border);
   text-align: center;
   color : white;
+  border: 1px solid silver;
+}
+
+.review .heading {
+  color: black;
+  font-weight: bold;
 }
 
 .review .box p {
   font-size: 1.6rem;
   padding: 2rem 0;
-  line-height: 1.8;
+  line-height: 1.4;
+  color: black;
 }
 
 .review .box p::before {
@@ -525,16 +555,19 @@ nav.show {
 }
 
 .review img {
-  height: 10rem;
-  width: 10rem;
+  height: 12rem;
+  width: 12rem;
   border-radius: 50%;
   object-fit: center;
 }
 
+/* ====== THIS IS THE END OF THE REVIEW SECTION ============= */
+
+/* ======== THIS IS THE START OF THE CONTACT SECTION =========== */
+
 .contact .row {
   display: flex;
   align-items: center;
-  background-color: var(--black);
   gap : 1.5rem;
   flex-wrap: wrap;
 }
@@ -543,18 +576,19 @@ nav.show {
   flex: 1 1 45rem;
   width: 100%;
   object-fit: cover;
+  border: 10px solid orange;
 }
 
 .contact .row form {
   flex: 1 1 45rem;
-  padding: 5rem 2rem;
+  padding: 0 2rem  5rem 2rem;
   text-align:center;
 }
 
 .contact .row form h3 {
   font-size: 2.3rem;
-  color: var(--main-color);
-  margin: 2rem 0;
+  color:#111;
+  margin-bottom: 2rem;
 }
 
 .form-group {
@@ -562,13 +596,14 @@ nav.show {
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background-color: var(--black);
-  border: var(--border);
+  background-color: #ddd;
+  color: black;
+  border:1px solid silver;
   padding-left: 2rem;
 }
 
 .form-icon {
-  color:  white;
+  color:  black;
   font-size: 2.5rem; 
   width: 100%;
 }
@@ -582,12 +617,17 @@ nav.show {
   width: 100%;
   padding: 2rem;
   font-size: 1.7rem;
-  color: #fff;
+  color: black;
   background: none;
 }
 
+/* ======  THIS IS THE END OF THE CONTACT SECTION ========== */
+
+
+/* =========== THIS IS THE START OF THE FOOTER =============== */
+
 footer {
-  background-color : white;
+  background-color : black;
   margin-top: -5rem;
 }
 
@@ -598,50 +638,42 @@ footer .share {
 .share .form-icon {
   display: inline-block;
   margin: 1.6rem 2rem;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   cursor: pointer;
+  color: white;
  
 }
 
-.share .form-icon:hover {
+/* .share .form-icon:hover {
   color: white;
-}
+} */
 
-.facebook, .twitter, .linkedin {
+/* .facebook, .twitter, .linkedin {
   color: blue;
-  
 }
-
-
 .facebook:hover, .twitter:hover, .linkedin:hover {
   background-color: blue;
 }
-
 .instagram {
   color: brown;
-}
-
-.instagram:hover {
+} */
+/* .instagram:hover {
   background-color: brown ;
 }
-
 .whatsapp {
   color: green;
 }
-
 .whatsapp:hover {
   background-color: green;
 }
-
 .pinterest {
   color: red;
-}
-
-.pinterest:hover  {
+} */
+/* .pinterest:hover  {
   background-color: red;
-}
+} */
 
 footer .links {
   display: flex;
@@ -666,7 +698,6 @@ footer .links a {
 footer .links a:hover {
   color: var(--black);
   background-color: white;
-  font-weight: bold;
 }
 
 .copyright {
@@ -682,7 +713,7 @@ footer .links a:hover {
 }
 
 .copyright .main-color {
-  color: var(--main-color);
+  color: white;
 }
 
 .copyright .bold {
